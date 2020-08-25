@@ -1,5 +1,5 @@
 # monitor internet speed
-Make sure you're getting what you pay your ISP for, not just when your internet seems slow, but always. Here is a Python script and instructions to periodically monitor your internet speed.
+Make sure you're getting what you pay your ISP for, not just when your internet seems slow, but always. Here is a Python script and instructions to make cron periodically monitor your internet speed.
 
 Requires [speedtest-cli](https://github.com/sivel/speedtest-cli), pandas, matplotlib and seaborn.
 
