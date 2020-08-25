@@ -16,13 +16,14 @@ s.upload(threads=threads)
 
 results_dict = s.results.dict()
 
-f = open('/Users/keatonb/speed.dat','a')
+datafile = '/Users/keatonb/speed.dat' #give full path
+f = open(datafile,'a')
 outline = f"{results_dict['timestamp']} {results_dict['download']*1e-6} {results_dict['upload']*1e-6} \n"
 f.write(outline)
 f.close()
 
 #plot
-df = pd.read_csv('/Users/keatonb/speed.dat',sep='\s',names=['date','download','upload'])
+df = pd.read_csv(datafile,sep='\s',names=['date','download','upload'])
 df.date = pd.to_datetime(df.date).dt.tz_convert(tz = 'America/Los_Angeles')
 
 f, axs = plt.subplots(2,1,figsize=(11, 6), sharex=True)
